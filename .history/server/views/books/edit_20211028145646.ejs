@@ -1,0 +1,61 @@
+<!--
+File: edit.ejs
+Name: Rajaofera Tiana Andriamasinalivao
+ID: 301121388
+Date: 28-Oct-2021
+-->
+<%- include ../partials/header.ejs %>
+
+<!-- content for the add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-8">
+
+            <h1><%= title %></h1>
+
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="titleTextField"> Title </label>
+                    <input type="text" class="form-control"
+                        id="titleTextField"
+                        placeholder="Enter The Title of the Book"
+                        name="Title" value = "<%= books.Title %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">Price</label>
+                    <input type="number" class="form-control"
+                        id="numberTextField"
+                        placeholder="Enter the Price of the Book"
+                        name="Price"  value = "<%= books.Price %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="AuthorTextField">Author</label>
+                    <input type="text" class="form-control"
+                        id="emailTextField"
+                        placeholder="Enter the Author's name"
+                        name="Author" value = "<%= books.Author %>" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genreTextField">Genre</label>
+                     <input type="text" class="form-control"
+                        id="genreTextField"
+                        placeholder="Enter the Genre of the Book"
+                        name="Genre"  value = "<%= books.Genre %>" required>
+                </div>
+
+                <button class="btn btn-primary" type="submit"> <i class="fas fa-edit"></i> Submit </button>
+
+                <a href="/books" class="btn btn-warning"> <i class="fas fa-undo"></i> Cancel </a>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<%- include ../partials/footer.ejs %>
